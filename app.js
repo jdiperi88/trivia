@@ -43,3 +43,6 @@ app.use('/auth', authRoutes);
 
 const userRoutes = require('./routes/user-routes');
 app.use('/user', userRoutes);
+
+const triviaapiRoutes = require('./routes/triviaapiRoutes');
+app.use('/trivia', triviaapiRoutes);
