@@ -46,3 +46,6 @@ app.use('/user', userRoutes);
 
 const triviaapiRoutes = require('./routes/triviaapiRoutes');
 app.use('/trivia', triviaapiRoutes);
+
+const gameRoutes = require('./routes/game-routes');
+app.use('/game', gameRoutes);
