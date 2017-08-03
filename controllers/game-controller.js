@@ -10,7 +10,7 @@ const gameController = {};
 
 
 gameController.index = (req, res) => {
- 
+
     console.log('herb');
     console.log(req.user.id);
     console.log(req.user.id);
@@ -20,25 +20,23 @@ gameController.index = (req, res) => {
 
 
 gameController.create = (req, res) => {
-   const triviaData = res.locals.trivia;
+    const triviaData = res.locals.trivia;
   Game.create({
     category: req.body.category,
     number_of_questions: req.body.number_of_questions,
     difficulty: req.body.difficulty,
   })
-  joinTable.create({
-    user_id: req.user.id,
+    .then(game =>{
+     return joinTable.create({
+        user_id: req.user.id,
+        game_id: game.id
+      })
   })
-  questionTable.create({
-    question: triviaData[0].question,
-    correct_answer: triviaData[0].correct_answer
+    .then(joinTableRow =>{
+       return questionTable.create(joinTableRow.game_id,triviaData)
+     })
+      
 
-  })
-
-   wrongAnswerTable.create({
-     incorrect_answer: req.body.incorrect_answer[0],
-
-  })
     .then(() => {
     res.redirect('/game');
   }).catch(err => {
