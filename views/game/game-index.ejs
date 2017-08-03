@@ -1,9 +1,8 @@
 <% include ../partials/boilerplate %>
 <div class="gameContainer">
     <form class="gameForm" method='POST' action='/game'>
-                <h2>CHOOSE A CATEGORY</h2>
-
-        <input list="category" name="category" placeholder="Category">
+        <h2>CHOOSE A CATEGORY</h2>
+        <input type="text" list="category" name="category" placeholder="Category">
             <datalist id="category">
                 <option value="any">Any Category</option>
                 <option value="9">General Knowledge</option>
@@ -31,13 +30,9 @@
                 <option value="31">Entertainment: Japanese Anime &amp; Manga</option>
                 <option value="32">Entertainment: Cartoon &amp; Animations</option>	
             </datalist>
-    
          <h2>NUMBER OF QUESTIONS</h2>
-
-           
-        <input name='number_of_questions' type='number' min='1' max="50" placeholder='Number of Questions' required />
-     <h2>DIFFICULTY</h2>
-           
+        <input class="number" name='number_of_questions' type='number' min='1' max="50" placeholder='Number of Questions' required />
+        <h2>DIFFICULTY</h2>   
         <input list="difficulty" name="difficulty" placeholder="Difficulty">
             <datalist id="difficulty">
                 <option value="easy">
@@ -45,7 +40,7 @@
                 <option value="hard">
             </datalist>
     
-        <input type='submit' value='ADD GAME!' />
+        <input class="buttons" type='submit' value='ADD GAME!' />
     </form>
 </div>
 

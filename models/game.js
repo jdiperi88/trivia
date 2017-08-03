@@ -4,14 +4,14 @@ const Game = {};
 
 Game.findById = (id) => {
   return db.oneOrNone(`
-    SELECT * FROM games
+    SELECT * FROM game
     WHERE id = $1
   `, [id]);
 };
 
 Game.create = (game) => {
   return db.one(`
-    INSERT INTO games
+    INSERT INTO game
     (category, number_of_questions,difficulty)
     VALUES ($1, $2, $3)
     RETURNING *
