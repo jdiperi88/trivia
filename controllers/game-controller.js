@@ -37,8 +37,8 @@ gameController.create = (req, res) => {
      })
       
 
-    .then(() => {
-    res.redirect('/game');
+    .then((data) => {
+    res.redirect('/user');
   }).catch(err => {
     console.log(err);
     res.status(500).json(err);

@@ -5,7 +5,7 @@
 body {
   min-height: 100vh;
   display: flex;
-  font-size: 18px;
+  font-size: 1.2rem;
   font-family: Helvetica, sans-serif;
   line-height: 1.4em;
   flex-direction: column;
@@ -85,14 +85,6 @@ a{
   align-items: center;
 }
 
-form{
-   display:flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%; 
-  height: 100%;
-}
 .formContainer{
   display: flex;
   justify-content: center;
@@ -124,7 +116,7 @@ a:hover{
     position: absolute;
     top: 20%;
     left: 25%;
-    height: 50%;
+    height: 60%;
     width: 50%;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 20%; 
@@ -133,7 +125,17 @@ a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
 
+.logo{
+  background: url('../images/top_fact_logo.png') no-repeat;
+  height: 50%;
+  width: 20%;
+  background-size: cover;
+  margin-top: 3%
 }
 
 .homeRow1 h1{
@@ -277,3 +279,99 @@ h2{
     font-size: 1.25rem;
     text-shadow: 2px 2px black;
 }
+
+.userContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5%;
+  height: 50%;
+}
+
+.userContainer h2{
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.userGameContainer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.headings{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.userGames{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.eachGame{
+  display: flex;
+    width: 100%;
+      justify-content: space-around;
+  align-items: center;
+}
+
+.trivia{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+
+}
+
+.userButton{
+  width: 7%;
+}
+
+.triviaContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.questionRow{
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin-left: 2%;
+  border-bottom: 3px solid #FFCC67;
+  margin-top: 2%;
+
+
+}
+
+.questionRow1{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1%;
+  width: 75%;
+  margin-top: 3%; 
+}
+
+.questionRow2{
+  display: flex;
+  justify-content: space-around;
+   margin-bottom: 2%;
+   width: 75%;
+
+}
+
+.correctAnswer{
+  border: 5px solid black;
+}
+

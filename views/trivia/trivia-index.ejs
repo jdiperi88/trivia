@@ -1,6 +1,30 @@
 <% include ../partials/boilerplate %>
-<h1>WELCOME TO TOP FACT </h1>
-<p>questions: <%= trivia[0].question %></p>
-<p>Humidity: <%= trivia[0].correct_answer %></p>
-<a href='/trivia'>trivia</a>
+ 
+
+    <div class="triviaContainer">
+        <h1>WELCOME TO TOP FACT </h1>
+        <% var i =0; data.forEach(question =>{  %>
+
+    <div class="questionRow">
+        <div> <%= question.question %></div>
+    </div>
+    <div class="questionRow1">
+        <div  clicked="" id="correctanswer1" class="correctAnswer"  > A: <%= question.correct_answer %></div>
+
+        <div>B: <%= question.incorrect_answers[0].incorrect_answer %></div>
+    </div>
+    <div class="questionRow2">
+        <div>C: <%= question.incorrect_answers[1].incorrect_answer %></div>
+        <div>D: <%= question.incorrect_answers[2].incorrect_answer %></div>
+    </div>
+        
+  
+     <%   }) %>
+       </div>
+
+  
+<script type="text/javascript" src="javascript/triviaGameScript.js"></script>
+
 <% include ../partials/end %>
+
+

@@ -13,7 +13,8 @@ Game.create = (game) => {
   return db.one(`
     INSERT INTO game
     (category, number_of_questions,difficulty)
-    VALUES ($1, $2, $3)
+    VALUES 
+    ($1, $2, $3)
     RETURNING *
   `, [game.category, game.number_of_questions, game.difficulty]);
 };

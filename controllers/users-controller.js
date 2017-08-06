@@ -1,12 +1,18 @@
 const User = require('../models/user');
 const bcrypt = require('bcryptjs');
+const GameData = require('../models/trivia');
 
 const usersController = {};
 
 usersController.index = (req, res) => {
+    GameData.findGamesById(req.user.id)
+    .then(data =>{
+      console.log(data);
   res.render('user/user-index', {
       user: req.user,
-  });
+      data: data,
+  }) 
+    });
 };
 
 usersController.create = (req, res, next) => {
@@ -21,7 +27,7 @@ usersController.create = (req, res, next) => {
   }).then(user => {
     req.login(user, (err) => {
       if (err) return next(err);
-      res.redirect('user');
+      res.redirect('/game');
     });
   }).catch(err => {
     console.log(err);

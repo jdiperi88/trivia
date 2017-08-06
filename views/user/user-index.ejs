@@ -1,5 +1,35 @@
 <% include ../partials/boilerplate %>
-<h1>Welcome back, <%= user.username %>! </h1>
-<p>user info goes here</p>
+
+<div class="userContainer">
+    <h1>WELCOME BACK, <%= user.username.toUpperCase(); %>! </h1>
+    <h2>CHOOSE YOUR GAME</h2>
+</div>
+
+<div class="userGameContainer">
+    <div class="headings">
+        <h3>ID</h3>
+        <h3>USER</h3>
+        <h3>CATEGORY</h3>
+        <h3># OF QUESTIONS</h3>
+        <h3>DIFFICULTY</h3>
+        <h3>SELECT</h3>
+    </div>
+    <div class="userGames">
+       
+            <% data.forEach(item =>{  %>
+          
+            <form method="POST" class="trivia" action="/trivia">
+                <h3><%= item.game_id %>  <input type="hidden" name="game_id" value="<%= item.game_id %>"></h3>
+                <h3><%= user.uservalue %>  <input type="hidden" name="username" value="<%= user.username %> " ></h3>
+                <h3><%= item.category %>  <input type="hidden" name="category" value= "<%= item.category %>"></h3>
+                <h3><%= item.number_of_questions %>  <input type="hidden" name="number_of_questions" value="<%= item.number_of_questions %>"/></h3>
+                <h3><%= item.difficulty %>  <input type="hidden" name="" value=<%= item.difficulty %>></h3>
+                <input class="userButton" type="submit"></input> 
+              </form> 
+          
+        <% }) %>
+       
+    </div>
+</div>
 <a href='/trivia'>trivia</a>
 <% include ../partials/end %>

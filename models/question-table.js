@@ -19,7 +19,7 @@ Questions.findById = (id) => {
 // };
 
 
-
+// code I am proudest of by farr!! 
 Questions.create = (game_id, triviaData) => {
   return Promise.all(triviaData.map(questions => {
     return db.one(`INSERT INTO question 
