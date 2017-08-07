@@ -1,4 +1,8 @@
-# The Legend of DBZ
+# TOP FACT
+
+## Heroku Link
+
+* https://enigmatic-coast-60319.herokuapp.com/
 
 ## Why I am choosing this game?
 * About a year ago, I was hooked on this game called trivia crack. I was hoping to recreate an app similiar to trivia crack.
