@@ -1,9 +1,10 @@
 <% include ../partials/boilerplate %>
- 
-    <h1 id="points"></h1>
-    <h1 class="score"><%= process.env.myPoints %></h1>
+    <div class="pointsRow">
+        <h1>Points: </h1>
+        <h1 id="points"></h1>
+    </div>
     <div class="triviaContainer">
-        <h1>WELCOME TO TOP FACT </h1>
+        <h1>GAME TIME!!! </h1>
         <% var i =0; data.forEach(question =>{ i+=1 %>
 
     <div class="questionRow">

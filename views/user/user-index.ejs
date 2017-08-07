@@ -35,8 +35,10 @@
                 <input class="userButton" type="submit"></input> 
                 </div>
               </form> 
-            <a href='/game'>Add Game</a>
-              <a href='/user/<%= item.game_id %>'>Delete</a>
+            <div class="linkRoute">
+                <a href='/game'>Add Game</a>
+                <a href='/user/<%= item.game_id %>'>Delete</a>
+            </div>
         <% }) %>
        
 </div>
