@@ -1,4 +1,3 @@
-\c trivia;
 
 CREATE TABLE IF NOT EXISTS users
 (
