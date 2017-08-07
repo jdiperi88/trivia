@@ -7,7 +7,6 @@
 ![alt text](public/images/login.png "Login")
 ![alt text](public/images/gameSelection.png "Game Selection")
 
->>>>>>> 352a2e7259cc460220eda7ba9724fade851a5875
 
 ## Initial thoughts on game structure
 * I know I will have to make items have collison detection.
