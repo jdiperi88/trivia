@@ -23,7 +23,10 @@ CREATE TABLE IF NOT EXISTS user_game_join
   id SERIAL PRIMARY KEY,
   user_id INT REFERENCES users(id) NOT NULL,
   game_id INT REFERENCES game(id) NOT NULL
+  top_score INT  
 );
+
+
 
 CREATE TABLE IF NOT EXISTS question
 (

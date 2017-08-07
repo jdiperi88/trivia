@@ -132,14 +132,14 @@ a:hover{
 
 .logo{
   background: url('../images/top_fact_logo.png') no-repeat;
-  height: 50%;
-  width: 20%;
-  background-size: cover;
+  height: 55%;
+  width: 25%;
+  background-size: contain;
   margin-top: 3%
 }
 
 .homeRow1 h1{
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-shadow:2px 2px black;
 }
 
@@ -216,7 +216,7 @@ button{
 }
 
 h1{
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     text-shadow:2px 2px black;
 }
 
@@ -371,7 +371,59 @@ h2{
 
 }
 
-.correctAnswer{
-  border: 5px solid black;
+.col{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+h3{
+}
+
+.trivia input {
+
+    width: 20%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+}
+
+.trivia input:hover{
+    width: 100%;
+    background: rgba(255, 255, 255, 1);
+    color: black;
+}
+
+.singleGameContainer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-top: 3%;
+}
+
+.singleGameContainer input {
+
+    width: 20%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+}
+
+.singleGameContainer input:hover{
+    width: 100%;
+    background: rgba(255, 255, 255, 1);
+    color: black;
+}
+
+h3{
+  font-size: 1.2rem;
+}
+
+.singleTitle{
+  text-align: center;
+  margin-top: 3%;
+}
+
 

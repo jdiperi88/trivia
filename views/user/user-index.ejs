@@ -6,30 +6,45 @@
 </div>
 
 <div class="userGameContainer">
-    <div class="headings">
-        <h3>ID</h3>
-        <h3>USER</h3>
-        <h3>CATEGORY</h3>
-        <h3># OF QUESTIONS</h3>
-        <h3>DIFFICULTY</h3>
-        <h3>SELECT</h3>
-    </div>
-    <div class="userGames">
+  
+       
+        
+       
+        
+        
+
        
             <% data.forEach(item =>{  %>
           
             <form method="POST" class="trivia" action="/trivia">
-                <h3><%= item.game_id %>  <input type="hidden" name="game_id" value="<%= item.game_id %>"></h3>
-                <h3><%= user.uservalue %>  <input type="hidden" name="username" value="<%= user.username %> " ></h3>
-                <h3><%= item.category %>  <input type="hidden" name="category" value= "<%= item.category %>"></h3>
-                <h3><%= item.number_of_questions %>  <input type="hidden" name="number_of_questions" value="<%= item.number_of_questions %>"/></h3>
-                <h3><%= item.difficulty %>  <input type="hidden" name="" value=<%= item.difficulty %>></h3>
+                <div class="col">
+                    <h3>ID</h3>
+                   <%= item.game_id %>  <input type="hidden" name="game_id" value="<%= item.game_id %>">
+                </div>
+                <div class="col">
+                    <h3>USER</h3> 
+                    <%= user.username %>  <input type="hidden" name="username" value="<%= user.username %> " >
+                </div>
+                <div class="col">
+                    <h3>CATEGORY</h3>
+                    <%= item.category %>  <input type="hidden" name="category" value= "<%= item.category %>" >
+                </div>
+                <div class="col">
+                     <h3># OF QUESTIONS</h3>
+                    <%= item.number_of_questions %>  <input type="hidden" name="number_of_questions" value="<%= item.number_of_questions %>"/>
+                </div>
+                <div class="col">
+                    <h3>DIFFICULTY</h3>
+                    <%= item.difficulty %>  <input type="hidden" name="" value=<%= item.difficulty %>>
+                </div>
+                <div class="col">
+                <h3>SELECT</h3>
                 <input class="userButton" type="submit"></input> 
+                </div>
               </form> 
-          
+
+              <a href='/user/<%= item.game_id %>'>Delete</a>
         <% }) %>
        
-    </div>
 </div>
-<a href='/trivia'>trivia</a>
 <% include ../partials/end %>

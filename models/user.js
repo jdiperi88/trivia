@@ -18,4 +18,21 @@ User.create = (user) => {
   `, [user.username, user.password_digest, user.email, user.first_name, user.last_name]);
 };
 
+User.findById = (id) => {
+  return db.oneOrNone(`
+  SELECT * FROM game
+  WHERE id = $1
+  `, [id]);
+};
+
+User.destroy = (id) => {
+  return db.none(`
+    DELETE FROM game
+    join user_game_join on user_game_join.game_id = game.id
+    join question on question.game_id = game.id
+    WHERE game.id = $1
+  `, [id])
+}
+
+
 module.exports = User;

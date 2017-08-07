@@ -35,4 +35,28 @@ usersController.create = (req, res, next) => {
   });
 };
 
+usersController.show = (req, res) => {
+  User.findById(req.params.id)
+    .then(data => {
+      console.log(data);
+      res.render('user/single-game', {
+        data: data,
+        username:req.user.username
+      })
+    }).catch(err => {
+      console.log(err);
+      res.status(500).json({ err });
+    });
+}
+
+usersController.delete = (req, res) => {
+  User.destroy(req.params.id)
+    .then(() => {
+      res.redirect('user/user-index');
+    }).catch(err => {
+    console.log(err);
+    res.status(500).json({ err });
+  });
+}
+
 module.exports = usersController;

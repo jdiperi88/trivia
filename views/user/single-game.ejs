@@ -1,0 +1,35 @@
+
+<% include ../partials/boilerplate %>
+ 
+
+<h1 class="singleTitle">GAME <%= data.id %> </h1>
+<div class="singleGameContainer">
+    
+    <div class="col">
+        <h3>ID</h3>
+        <h3> <%= data.id %></h3>
+    </div>
+    <div class="col">
+        <h3>USER</h3> 
+        <h3> <%= username %></h3>
+    </div>
+    <div class="col">
+        <h3>CATEGORY</h3>
+        <h3> <%= data.category %></h3>
+    </div>
+    <div class="col">
+        <h3># OF QUESTIONS</h3>
+        <h3><%= data.number_of_questions %></h3>
+    </div>
+    <div class="col"> 
+        <h3>DIFFICULTY</h3>
+        <h3> <%= data.difficulty %></h3>
+    </div>
+    <div class="col"> 
+    <h3>DELETE</h3>
+<form method='POST' action='/user/<%= data.id %>?_method=DELETE'>
+  <input type='submit' value='DELETE IT' />
+  </form>
+    </div>
+</div>
+<% include ../partials/end %>

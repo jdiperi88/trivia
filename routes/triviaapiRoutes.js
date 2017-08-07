@@ -9,4 +9,6 @@ const authHelper = require('../services/auth/auth-helpers')
 
 triviaRouter.post('/',authHelper.loginRequired, triviaapiController.index);
 
+
+
 module.exports = triviaRouter;

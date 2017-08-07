@@ -8,4 +8,8 @@ userRoutes.get('/', authHelpers.loginRequired, usersController.index);
 
 userRoutes.post('/', authHelpers.loginRequired, triviaApiController.index);
 
+userRoutes.get('/:id', authHelpers.loginRequired, usersController.show);
+
+userRoutes.delete('/:id', authHelpers.loginRequired, usersController.delete);
+
 module.exports = userRoutes;

@@ -1,21 +1,22 @@
 <% include ../partials/boilerplate %>
  
-
+    
+    
     <div class="triviaContainer">
         <h1>WELCOME TO TOP FACT </h1>
-        <% var i =0; data.forEach(question =>{  %>
+        <% var i =0; data.forEach(question =>{ i+=1 %>
 
     <div class="questionRow">
         <div> <%= question.question %></div>
     </div>
     <div class="questionRow1">
-        <div  clicked="" id="correctanswer1" class="correctAnswer"  > A: <%= question.correct_answer %></div>
+        <div  clicked="" id="correctanswer<%=i %>" class="correctAnswer"  > A: <%= question.correct_answer %></div>
 
-        <div>B: <%= question.incorrect_answers[0].incorrect_answer %></div>
+        <div clicked="" id="incorrectanswer<%=i %>" class="incorrectanswer<%=i %>" >B: <%= question.incorrect_answers[0].incorrect_answer %></div>
     </div>
     <div class="questionRow2">
-        <div>C: <%= question.incorrect_answers[1].incorrect_answer %></div>
-        <div>D: <%= question.incorrect_answers[2].incorrect_answer %></div>
+        <div clicked="" id="secondincorrectanswer<%=i %>"  >C: <%= question.incorrect_answers[1].incorrect_answer %></div>
+        <div clicked="" id="lastanswer<%=i %>" >D: <%= question.incorrect_answers[2].incorrect_answer %></div>
     </div>
         
   
