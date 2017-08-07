@@ -3,6 +3,8 @@
 
 var points =0;
 
+
+
 correctAnswer = (i) => { 
    
    let ans= document.getElementById(`correctanswer${i}`);
@@ -18,7 +20,7 @@ correctAnswer = (i) => {
         console.log("unclicked");
          document.querySelector(`#correctanswer${i}`).style.border = "3px solid #FFCC67";
     }
-    console.log(points);
+    document.getElementById('points').innerHTML=points;
 }
 
 // incorrect answer 1
