@@ -1,11 +1,11 @@
 const User = require('../models/user');
 const bcrypt = require('bcryptjs');
-const GameData = require('../models/trivia');
+const triviaModel = require('../models/trivia');
 
 const usersController = {};
 
 usersController.index = (req, res) => {
-    GameData.findGamesById(req.user.id)
+    triviaModel.findGamesById(req.user.id)
     .then(data =>{
       console.log(data);
   res.render('user/user-index', {

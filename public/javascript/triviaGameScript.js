@@ -20,7 +20,7 @@ correctAnswer = (i) => {
         console.log("unclicked");
          document.querySelector(`#correctanswer${i}`).style.border = "3px solid #FFCC67";
     }
-    document.getElementById('points').innerHTML=points;
+    document.getElementById('points').value=points;
 }
 
 // incorrect answer 1

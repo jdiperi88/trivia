@@ -1,8 +1,7 @@
 <% include ../partials/boilerplate %>
-    <div class="pointsRow">
-        <h1>Points: </h1>
-        <h1 id="points"></h1>
-    </div>
+  
+     
+
     <div class="triviaContainer">
         <h1>GAME TIME!!! </h1>
         <% var i =0; data.forEach(question =>{ i+=1 %>
@@ -22,6 +21,13 @@
         
   
      <%   }) %>
+<form class="gameForm" method='POST' action='/trivia/score'>
+
+    <input type="hidden" name="points" value="" id="points"/> 
+    <input type="hidden" name="gameid" value="<%= data[0].game_id %>"/>
+    <input type="hidden" name="questions" value="<%= data[0].number_of_questions %>"/> 
+    <input type="submit" value="GET RESULTS">
+</form>
        </div>
 
   

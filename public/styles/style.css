@@ -378,8 +378,7 @@ h2{
   justify-content: center;
 }
 
-h3{
-}
+
 
 .trivia input {
 
@@ -442,3 +441,121 @@ h3{
   margin-bottom: 2%;
 }
 
+.scoreContainer{
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 50%;
+  position: absolute;
+  left: 25%;
+  top:25%;
+  border-radius: 20%;
+}
+
+.scoreRow{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 70%;
+  align-items: center;
+}
+
+.scoreLinkRoute{
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scoreForm1{
+  width: 50%;
+
+}
+
+.scoreForm2{
+  width: 70%;
+
+}
+
+.scoreForm input{
+  width: 70%;
+ 
+}
+
+.scoreLogo{
+  background: url('../images/top_fact_logo.png') no-repeat;
+  height: 45%;
+  width: 30%;
+  background-size: contain;
+  margin-top: 3%;
+}
+
+h4{
+  font-size: .7rem;
+}
+
+#percent{
+  font-size: .9rem;
+}
+
+.gameForm input {
+
+    width: 20%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 25%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.gameForm input:hover{
+    width: 25%;
+    background: rgba(255, 255, 255, 1);
+    color: black;
+}
+
+.leaderboardContainer{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+
+}
+
+.leaderboardContainer h1{
+  text-align: center;
+  margin-top: 5%;
+}
+
+.leaderboardRow1{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3%;
+  margin-left: 4%;
+}
+
+
+
+.leaderboardRow2{
+ display: flex;
+  margin-left: 4%;
+}
+
+.leaderboard1{
+ width: 33%;
+ text-align: center;
+}
+
+.leaderboard2{
+
+ width: 33%;
+ text-align: center;
+}
+
+.leaderboard3{
+ width: 33%;
+ text-align: center;
+}

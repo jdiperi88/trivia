@@ -46,6 +46,23 @@ triviaGame.GetGame = (gameId) => {
     })
 };
 
+triviaGame.leaderboard = (user) => {
+  return db.many(`
+    SELECT * FROM score
+    where user_id = $1 ;
+  `, [user]);
+};
+
+triviaGame.score = (score,user,gameid) => {
+  return db.one(`
+    INSERT INTO score
+    (user_id, game_id,top_score)
+    VALUES 
+    ($1, $2, $3)
+    RETURNING *
+  `, [user, gameid, score]);
+};
+
 
 
 module.exports = triviaGame;

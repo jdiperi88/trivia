@@ -1,0 +1,20 @@
+<% include ../partials/boilerplate %>
+    <div class="leaderboardContainer">
+        <h1>GAME: <%= score.game_id %> LEADERBOARD</h1>
+        <div class="leaderboardRow1">
+            <h3 class="leaderboard1">ID</h3>
+            <h3 class="leaderboard2">USER</h3> 
+            <h3 class="leaderboard3">TOP SCORE</h3>
+        </div>
+        
+            <% score.forEach(item =>{  %>
+           <div class="leaderboardRow2">
+                <h3 class="leaderboard1"> <%= item.game_id %></h3>
+                <h3 class="leaderboard2"> <%= user %></h3>
+                <h3 class="leaderboard3"> <%= item.top_score %> </h3>
+             </div>
+        
+            <% }) %>
+       
+    </div>
+<% include ../partials/end %>
