@@ -1,41 +1,20 @@
 # TOP FACT
+[Top Fact Repo](https://github.com/jdiperi88/trivia)
+[Top Fact Heroku](https://enigmatic-coast-60319.herokuapp.com/)
 
-## Heroku Link
+## What is Top Fact?
 
-* https://enigmatic-coast-60319.herokuapp.com/
+> Top Fact is a trivia web application that allows users to customize their own type of trivia game.
 
-## Why I am choosing this game?
-* About a year ago, I was hooked on this game called trivia crack. I was hoping to recreate an app similiar to trivia crack.
-
-=======
+## Screen Shots
 ![alt text](public/images/login.png "Login")
 ![alt text](public/images/gameSelection.png "Game Selection")
 
 
-## Initial thoughts on game structure
-* I know I will have to make items have collison detection.
+## Technical Discussion
 
-* I will need to have variables to monitor the locations of each items x and y movements.
-
-* I will need to have conditionals to test if items have collided. 
-
-* I will need to have a life bar that decrements on each collison. 
-
-* An animation functions needs to be used. 
-
-## Phase of completion
-
-* I needed to create wire frames highlighting the amount of items and elements need to be created and when each portion of data would be requested and stored.
-
-* The first portion was creating the data/model structure. I needed to populate four different sql tables so that I can store the specific game the user requested and return to it later. The main purpose for this was to implement socket i.o and invite friends to the game, but I did not get around to it.
-
-
-
-* After the layout and data structure was created, I had a good idea of the views I wanted to render. I began creating routes to implement those data structures.
-
-* I then created the views with css and html structures in collaboration with database/javascript to piece together the project. I tested each phase.
-
-* I ran into some issues trying to delete items since the tables are all dependent on eachother in some manner. 
+> Top fact was built using Node JS / Express / Postgres in the backend and the EJS templating engine to render the front end. Javescript was used for simple DOM manipulation.
+> Customized games are first pulled from the open trivia api and then saved in the psql database to be rendered at a later date. 
 
 ## Links/Resources
 
@@ -43,7 +22,28 @@
 http://all4desktop.com/data_images/1280%20x%20720/4180453-hi-tech-planet.jpg
 
 
+## Opportunities for Future Growth
 
+> I would love to integrate socket i.o and make this a full multiplayer game where you can invite users to compete in the same customized quiz.
+> Add a some page transitions and other smooth DOM animations
+> Mobile friendly design
+> A little cleaner astethic 
+
+## Instructions
+
+1. Clone or download the repository (by clicking the green button)
+2. Inside your terminal, cd into the root folder of the application
+3. Run npm install to install the dependencies
+4. npm run dev and type localhost:8080 to run application
+
+
+
+
+
+
+
+
+```
 
 
 
