@@ -1,6 +1,6 @@
 # TOP FACT
-[Top Fact Repo](https://github.com/jdiperi88/trivia)
-[Top Fact Heroku](https://enigmatic-coast-60319.herokuapp.com/)
+* [Top Fact Repo](https://github.com/jdiperi88/trivia)
+* [Top Fact Heroku](https://enigmatic-coast-60319.herokuapp.com/)
 
 ## What is Top Fact?
 
