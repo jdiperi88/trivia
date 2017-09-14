@@ -5,8 +5,7 @@
 
 ## What is Top Fact?
 
-* Top Fact is an express application that allows users to customize their own Trivia games. 
-
+* Built using express in the backend and the EJS template engine in the frontend, Top Fact is an application that connects to the open trivia API. It allows users to register and create their own customized trivia game. Their game is saved in five PSQL tables where they can re-render it at anytime.
 
 ![alt text](public/images/login.png "Login")
 ![alt text](public/images/gameSelection.png "Game Selection")
