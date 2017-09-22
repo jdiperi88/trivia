@@ -27,7 +27,7 @@ http://all4desktop.com/data_images/1280%20x%20720/4180453-hi-tech-planet.jpg
 > I would love to integrate socket i.o and make this a full multiplayer game where you can invite users to compete in the same customized quiz.
 > Add a some page transitions and other smooth DOM animations
 > Mobile friendly design
-> A little cleaner astethic 
+> A little cleaner astethic. 
 
 ## Instructions
 
