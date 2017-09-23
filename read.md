@@ -34,4 +34,4 @@ http://all4desktop.com/data_images/1280%20x%20720/4180453-hi-tech-planet.jpg
 1. Clone or download the repository (by clicking the green button)
 2. Inside your terminal, cd into the root folder of the application
 3. Run npm install to install the dependencies
-4. npm run dev and type localhost:8080 to run application
+4. npm run dev and type localhost:8080 to run application.
