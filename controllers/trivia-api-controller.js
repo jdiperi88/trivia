@@ -5,20 +5,30 @@ const Entities = require('html-entities').XmlEntities;
 const entities = new Entities();
 const triviaapiController = {};
 
-triviaapiController.index = (req, res) => {
-  console.log(req.body.game_id);
-  triviaModel.GetGame(req.body.game_id)
-    .then(data =>{
-          console.log(data);
 
-          res.render('trivia/trivia-index', {
-            data: data,
-      });
+triviaapiController.index = (req, res) => {
+  console.log(req.body.game_id)
+  triviaModel.GetGame(req.body.game_id)
+    .then(data => {
+      console.log(data)
+      var decodedData = []
+      for (var q of data) {
+        var decodedQ = {
+          question: entities.decode(q.question),
+          correct_answer: q.correct_answer,
+          incorrect_answers: q.incorrect_answers
+        }
+        decodedData.push(decodedQ)
+      }
+
+      res.render('trivia/trivia-index', {
+        data: decodedData
+      })
     })
     .catch(err => {
-      console.log(err);
-      res.status(500).json({ err });
-    });
+      console.log(err)
+      res.status(500).json({ err})
+    })
 }
 
 triviaapiController.score = (req, res) => {
