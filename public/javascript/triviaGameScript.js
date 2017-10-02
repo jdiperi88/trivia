@@ -1,5 +1,5 @@
 
-// window.load = function() {
+// document.load = function() {
 
 var points =0;
 
@@ -74,10 +74,10 @@ lastAnswer = (i) => {
     console.log(points);
 }
 
-const questionLength =document.getElementById('dataLength').value;
+// const questionLength =document.getElementById('dataLength').value;
 
 
-for(let i = 1; i<= questionLength ; i++){
+for(let i = 1; i<= 50 ; i++){
 
         document.addEventListener('DOMContentLoaded', function(){
             document.querySelector(`#correctanswer${i}`).addEventListener("click", function(){ console.log(i);correctAnswer(i)  });
@@ -101,9 +101,6 @@ for(let i = 1; i<= questionLength ; i++){
             document.querySelector(`#lastanswer${i}`).addEventListener("click", function(){ console.log(i);lastAnswer(i)  });
 
         })
-
-
-
 }
 
-
+// }

@@ -15,14 +15,19 @@ triviaapiController.index = (req, res) => {
       for (var q of data) {
         var decodedQ = {
           question: entities.decode(q.question),
-          correct_answer: q.correct_answer,
+          correct_answer: entities.decode(q.correct_answer),
           incorrect_answers: q.incorrect_answers
+         
+          // incorrect_answers_two: q.incorrect_answers[1],
+          // incorrect_answers_three: q.incorrect_answers[2]
         }
         decodedData.push(decodedQ)
       }
 
+
       res.render('trivia/trivia-index', {
-        data: decodedData
+        data: data,
+        question_data: decodedData
       })
     })
     .catch(err => {
