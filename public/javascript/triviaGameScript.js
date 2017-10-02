@@ -74,10 +74,10 @@ lastAnswer = (i) => {
     console.log(points);
 }
 
+const questionLength =document.getElementById('dataLength').value;
 
 
-
-for(let i = 1; i<=50; i++){
+for(let i = 1; i<= questionLength ; i++){
 
         document.addEventListener('DOMContentLoaded', function(){
             document.querySelector(`#correctanswer${i}`).addEventListener("click", function(){ console.log(i);correctAnswer(i)  });
